@@ -3,6 +3,27 @@
 This script exports the file hierarchy in a Mermaid graph format.
 Python format.
 
+**Example :**
+
+```
+Example
+├───subfolder_1
+│   ├───subsubfolder_1
+│   └───subsubfolder_2
+└───subfolder_2
+```
+
+*Converted to mermaid graph :*
+
+```mermaid
+
+graph LR
+    example --> subfolder_1
+    subfolder_1 --> subsubfolder_1
+    subfolder_1 --> subsubfolder_2
+    example --> subfolder_2
+```
+
 ## Parameters
 * `file_in` : The file name to write the output to.
 * `folder_path` (optional) : The path of the folder to be parsed. Defaults to None.
